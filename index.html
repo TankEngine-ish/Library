@@ -8,27 +8,71 @@
 </head>
 
 
-
 <body>
-    
-<header>
-    <h1>Bare-Bones Book Library</h1>
-</header>
+    <header class = 'site-header'></header>
+
+    <h1 class = header-title>Bare-Bones Book Library</h1>
+
+    <button id="add-book">+</button>
+
+      
+        <div class="overlay"></div>
+        <!-- the color change of the background when pop-up appears -->
+        
+        <div class="bookshelf"></div>
 
 
+          <section id="popup">
+            <div id="container">
 
-<button id = "add-book">+</button>
+              <h1>New Book</h1>
+              <div class="close">+</div>
+              <form id="form" action="/" method="GET">
+                <label for="title">Title:</label>
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="Book Title"
+            
+                  required
+                /><br />
+
+                <label for="author">Author:</label>
+                <input
+                  type="text"
+                  id="author"
+                  name="author"
+                  placeholder="Author"
+                  
+                  required
+                /><br />
+
+                <label for="pages">Number of pages:</label>
+                <input
+                  type="number"
+                  id="pages"
+                  name="pages"
+                  placeholder="Pages"
+                
+                  required
+                /><br />
+
+                <label for="read">Mark as read?</label><br />
+                <select name="read" id="read">
+                  <option value="Yes">Confirm</option>
+                  <option value="No">Decline</option>
+                </select>
+                <br />
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+          </section>
 
 
+<script src="main.js" defer></script>
     
 </body>
-
-
-
-
-
-
-
 
 </html>
 
